@@ -1,8 +1,8 @@
 const TABLE_HEADERS = ["ID", "Age", "Experience", 
-    "Kind of Nicotine", "Physically Affected"]
+    "Kind of Nicotine", "Physically Affected"];
 
 const http = new XMLHttpRequest();
-const url = '/api/v1.0/signers/get/all';
+const url = '/api/v1/signers/get/all';
 http.open("GET", url);
 http.send();
 

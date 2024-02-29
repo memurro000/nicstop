@@ -11,19 +11,19 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@522&display=swap" rel="stylesheet">
         
         <link rel="icon" type="image/x-icon" href="/favicon.ico"> 
-        <link rel="stylesheet" href="styles.css">
-        <script
-            src="https://code.jquery.com/jquery-3.3.1.js"
-            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-            crossorigin="anonymous">
-        </script>
-        <script> 
-            $(function(){
-              $("#header").load("header.html"); 
-            });
-        </script>
+        <link rel="stylesheet" href="/main.css">
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="/global-load_header.js"></script>
     </head>
     <body>
         <div id="header"></div>
+        
+        <div id="main_content" class="main">
+            <p><h1>Do you recommend consumption of nicotine?</h1>
+            <p><button>I do not recommend</button>
+            <p><label id="count_label">
+                    0 people already do not recommend nicotine consumption on this site.</label>
+        </div>
     </body>
 </html>

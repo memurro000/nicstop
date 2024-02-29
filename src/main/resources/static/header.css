@@ -1,0 +1,75 @@
+.header-div {
+    background-color: black;
+}
+
+.header-home {
+  margin: 20px;
+  flex: 1;
+  text-decoration: none;
+  outline-color: transparent;
+  text-align: center;
+  line-height: 3;
+  font-size: 72px;
+  background: -webkit-linear-gradient(168deg, #ffa100 27%, #ff4c44 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  font-size: 30px;
+}
+
+.header-home:link,
+.header-home:visited {
+}
+
+.header-home:hover {
+    background: transparent;
+    -webkit-background-clip: none;
+    -webkit-text-fill-color: white; 
+    color: white;
+}
+
+.header-home:active
+.header-home:focus {
+    background: transparent;
+    -webkit-background-clip: none;
+    -webkit-text-fill-color: white; 
+    color: white;
+}
+
+.header-a {
+  margin: 20px;
+  flex: 1;
+  text-decoration: none;
+  outline-color: transparent;
+  text-align: center;
+  line-height: 3;
+  color: black;
+  font-size: 30px;
+}
+
+.header-a:link,
+.header-a:visited {
+  color: #ffa100;
+}
+
+.header-a:hover {
+  color: white;
+}
+
+.header-a:active
+.header-a:focus {
+  color: white;
+}
+
+.header-home.active {
+    background: transparent;
+    -webkit-background-clip: none;
+    -webkit-text-fill-color: white; 
+    color: white;
+}
+
+.header-a.active {
+    background: transparent;
+    -webkit-background-clip: none;
+    -webkit-text-fill-color: white; 
+    color: white;
+}
