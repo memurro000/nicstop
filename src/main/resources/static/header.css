@@ -61,10 +61,6 @@
 }
 
 .header-home.active {
-    background: transparent;
-    -webkit-background-clip: none;
-    -webkit-text-fill-color: white; 
-    color: white;
 }
 
 .header-a.active {

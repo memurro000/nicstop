@@ -29,23 +29,20 @@ html {
     font-size: 60px;
     color: #fff;
     padding: 10px 32px;
-    border: none;
     background: linear-gradient(168deg, #ffa100 27%, #ff4c44 100%);
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     border-radius: 70px;
     transition: 74ms;
-    /*display: flex;*/
-    /*flex-direction: row;*/
     align-items: center;
     cursor: pointer;
     height: 140px;
     margin: 2px;
+    border: none;
 }
 
 .main button:hover {
-    transition : 74ms;
-    padding: 10px 45px;
-    border: none;
+    transition: 74ms;
+    opacity: 95%;
 }
 
 #count_label {
