@@ -1,0 +1,1 @@
+$('[href="index.html"]').className += " header-active";

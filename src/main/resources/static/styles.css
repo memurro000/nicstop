@@ -1,0 +1,93 @@
+body,
+html {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.container {
+  display: flex;
+  gap: 0.625%;
+}
+
+.header-div {
+    background-color: black;
+}
+
+.header-home {
+  margin: 20px;
+  flex: 1;
+  text-decoration: none;
+  outline-color: transparent;
+  text-align: center;
+  line-height: 3;
+  color: black;
+  font-size: 30px;
+}
+
+.header-home:link,
+.header-home:visited {
+  color: #ff7a30;
+}
+
+.header-home:hover {
+  color: white;
+}
+
+.header-home:active
+.header-home:focus {
+  color: white;
+}
+
+.header-a {
+  margin: 20px;
+  flex: 1;
+  text-decoration: none;
+  outline-color: transparent;
+  text-align: center;
+  line-height: 3;
+  color: black;
+  font-size: 30px;
+}
+
+.header-a:link,
+.header-a:visited {
+  color: #ff7a30;
+}
+
+.header-a:hover {
+  color: white;
+}
+
+.header-a:active
+.header-a:focus {
+  color: white;
+}
+
+.header-active {
+    color: white;
+    background-color: white;
+}
+
+table {
+	width: 100%;
+	margin-bottom: 20px;
+	border: 1px solid #dddddd;
+	border-collapse: collapse; 
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+}
+
+th {
+	font-weight: bold;
+	padding: 5px;
+	background: #575757;
+	border: 1px solid #5c5c5c;
+}
+
+td {
+	border: 1px solid #dddddd;
+	padding: 5px;
+}
