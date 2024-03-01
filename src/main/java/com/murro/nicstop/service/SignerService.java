@@ -11,7 +11,7 @@ public interface SignerService {
 
     public UserSignToken saveSigner(UserSigner signer);
 
-    public UserSigner findById(int id);
+    public UserSigner findById(long id);
 
     public String updateSigner(UserSigner signer, int key);
 

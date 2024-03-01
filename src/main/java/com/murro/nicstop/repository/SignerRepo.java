@@ -1,19 +1,8 @@
 package com.murro.nicstop.repository;
 
-import com.murro.nicstop.model.UserSignToken;
 import com.murro.nicstop.model.UserSigner;
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface SignerRepo {
-
-    public List<UserSigner> findAllSigners();
+public interface SignerRepo extends JpaRepository<UserSigner, Long> {
     
-    public UserSignToken saveSigner(UserSigner signer, int key);
-
-    public UserSigner findById(int id);
-    
-    public String updateSigner(UserSigner signer, int key);
-    
-    public String deleteSigner(int id, int key);
 }
-

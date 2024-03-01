@@ -1,7 +1,15 @@
 package com.murro.nicstop;
 
+import java.io.IOException;
+
+import org.jline.reader.EndOfFileException;
+import org.jline.reader.LineReader;
+import org.jline.reader.LineReaderBuilder;
+import org.jline.reader.UserInterruptException;
+import org.jline.terminal.TerminalBuilder;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 
 
@@ -31,9 +39,35 @@ public class NicstopApplication {
                            """);
     }
 
-	public static void main(String[] args) {
-                printVersion();
-		SpringApplication.run(NicstopApplication.class, args);
+	public static void main(final String[] args) {
+            printVersion();
+            final ConfigurableApplicationContext context = 
+                SpringApplication.run(NicstopApplication.class, args);
+
+
+
+
+            try {
+                final LineReader lineReader = LineReaderBuilder.builder()
+                        .terminal(TerminalBuilder.builder().build())
+                        .build();
+
+                System.out.println("Введите Q для остановки приложения...");
+
+                while (true) {
+                    final String line = lineReader.readLine();
+                    if ("Q".equalsIgnoreCase(line.trim())) {
+                        System.out.println("Остановка приложения...");
+                        context.close();
+                        break;
+                    }
+                }
+            } 
+            catch (IOException | EndOfFileException | UserInterruptException ex) {
+                System.err.println(ex);
+            }
+
+
 	}
 
 }

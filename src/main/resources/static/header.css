@@ -3,6 +3,7 @@
 }
 
 .header-home {
+  margin-left: 50px;
   margin: 20px;
   flex: 1;
   text-decoration: none;
