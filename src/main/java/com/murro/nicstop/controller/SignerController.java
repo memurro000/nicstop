@@ -38,6 +38,11 @@ public class SignerController {
         return service.findById(id);
     }
 
+    @GetMapping("/get/random")
+    public UserSigner getRandom(){
+        return service.getRandom();
+    }
+
     @PostMapping("/new")
     public UserSignToken saveSigner(@RequestBody UserSigner signer){
         return service.saveSigner(signer);

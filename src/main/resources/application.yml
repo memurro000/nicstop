@@ -4,12 +4,15 @@ spring:
         username: murro
         password: deadcat
         driver-class-name: org.postgresql.Driver
+    mvc:
+        favicon: enabled
+        
     jpa:
         hibernate:
             ddl-auto: validate
         database: postgresql
         database-platform: org.hibernate.dialect.PostgreSQLDialect
-        show-sql: true
+        show-sql: false
         properties:
             hibernate:
-                format_sql: true
+                format_sql: false

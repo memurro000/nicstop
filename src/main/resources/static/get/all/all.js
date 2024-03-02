@@ -31,12 +31,12 @@ http.onreadystatechange = (e) => {
 
         for (var i = 0; i < data.length; ++i) {
             row = table.insertRow();
-            row.innerHTML += `<td>${data[i].id             || ''  }</td>`;
-            row.innerHTML += `<td>${data[i].age            || ''  }</td>`;
-            row.innerHTML += `<td>${data[i].experience     || ''  }</td>`;
-            row.innerHTML += `<td>${data[i].kindOfNicotine || ''  }</td>`;
+            row.innerHTML += `<td>${data[i].id             || ''    }</td>`;
+            row.innerHTML += `<td>${data[i].age            || ''    }</td>`;
+            row.innerHTML += `<td>${data[i].experience     || ''    }</td>`;
+            row.innerHTML += `<td>${data[i].kindOfNicotine || ''    }</td>`;
             row.innerHTML += 
-                    `<td>${data[i].physicalAffected ? 'Yes' : 'No'}</td>`;
+                    `<td>${data[i].physicallyAffected ? 'Yes' : 'No'}</td>`;
 
         }
 

@@ -12,7 +12,6 @@ import com.murro.nicstop.repository.SignerRepo;
 import com.murro.nicstop.service.SignerService;
 
 import lombok.AllArgsConstructor;
-import org.springframework.data.domain.Example;
 
 @Service
 @AllArgsConstructor
@@ -33,6 +32,11 @@ public class SignerServiceImpl implements SignerService{
     public UserSigner findById(long id) {
         System.out.println(token_repo.getReferenceById(id));
         return signer_repo.getReferenceById(id);
+    }
+
+    @Override
+    public UserSigner getRandom() {
+        return signer_repo.findRandomUserSignerWithCommentary();
     }
 
     @Override
