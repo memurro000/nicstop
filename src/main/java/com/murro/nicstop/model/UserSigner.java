@@ -12,6 +12,9 @@ import lombok.RequiredArgsConstructor;
 
 import org.springframework.lang.NonNull;
 
+//THE CLASS NOW USES A COLUMN DEFINITION TEXT FOR commentary FIELD
+//BY THE REASON PostgreSQL WON'T WORK WITH LOB ANNOTATION
+//IT CAN CAUSE ISSUES WITH INTEGRATING OTHER DBMS OR OTHER
 @Data
 @Entity
 @AllArgsConstructor
@@ -22,15 +25,19 @@ public class UserSigner {
     @Id
     @GeneratedValue
     private Long id;
+
+    @Column(nullable = false)
     private Integer age;
+    @Column(nullable = false)
     private Integer experience;
     @NonNull
+    @Column(nullable = false)
     private String kindOfNicotine;
     @NonNull
+    @Column(nullable = false)
     private Boolean physicallyAffected;
-    @Column(unique = true)
-    @NonNull
-    private String ip;
+
+    @Column(columnDefinition = "text")
     private String commentary;
 
 }

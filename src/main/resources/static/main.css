@@ -1,5 +1,7 @@
 body,
 html {
+  padding-top: 50px;
+  padding-bottom: 50px;
   margin: 0;
   font-family: "Inter", sans-serif;
   font-weight: 500;
@@ -7,9 +9,17 @@ html {
   font-size: 20px;
 }
 
-.container {
-  display: flex;
-  gap: 0.625%;
+.backdrop {
+    background-color: antiquewhite;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .main {

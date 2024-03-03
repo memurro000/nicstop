@@ -1,5 +1,6 @@
 package com.murro.nicstop.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -22,6 +23,7 @@ public class UserSignToken {
     @GeneratedValue
     private Long id;
     @NonNull
+    @Column(nullable = false)
     private Integer key;
     
 }

@@ -3,7 +3,7 @@ const TABLE_HEADERS = ["ID", "Age", "Experience",
 
 const http = new XMLHttpRequest();
 const url = '/api/v1/signers/get/all';
-http.open("GET", url);
+http.open("GET", url, true);
 http.send();
 
 http.onreadystatechange = (e) => {

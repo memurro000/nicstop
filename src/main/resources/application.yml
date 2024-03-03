@@ -9,9 +9,8 @@ spring:
         
     jpa:
         hibernate:
-            ddl-auto: validate
+            ddl-auto: create-drop
         database: postgresql
-        database-platform: org.hibernate.dialect.PostgreSQLDialect
         show-sql: false
         properties:
             hibernate:

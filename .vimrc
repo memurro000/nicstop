@@ -1,5 +1,3 @@
-set runtimepath-=~/.vim/bundle/YouCompleteMe
-
 let g:ycm_confirm_extra_conf = 0
 let g:NERDTreeShowHidden = 0
 let g:dbext_default_profile_myDB='type=pgsql:host=localhost:user=prikolshik:dsnname=holidays_db:dbname=holidays_db:'
@@ -22,6 +20,9 @@ let g:dbext_default_profile_myDB='type=pgsql:host=localhost:user=prikolshik:dsnn
     "set foldcolumn=10 " показать полосу для управления сворачиванием
     set foldlevel=1 " Первый уровень вложенности открыт, остальные закрыты
     "set foldopen=all " автоматическое открытие сверток при заходе в них
+
+"Визуальные настройки
+set number
 
 
 "Ремапы для insert 

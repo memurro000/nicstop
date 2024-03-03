@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+.single {
+    margin-top: 10%;
+    background-color: antiquewhite;
+    align-self: center;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: 50%;
+}
+
+.single div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.single label {
+    width: 500px;
+}
+
+.single b {
+    margin-right: 20px;
+}

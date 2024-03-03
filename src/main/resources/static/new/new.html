@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../main.css" type="text/css"/>
+        <link rel="stylesheet" href="new.css" type="text/css">
+
+
+        <title>new sign</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="/global-load_header.js"></script>
+    </head>
+    <body>
+        <div id="header"></div>
+
+        <div class="main">
+            <div class="form backdrop">
+                <div>
+                    <label for="age">Age:</label>
+                    <input name="age" id="age" type="number" min="0" max="99" placeholder="Years">
+                </div>
+                <div>
+                    <label for="experience">Experience of nicotine consumption:</label>
+                    <input name="experience" id="experience" type="number" min="0" max="99" placeholder="Years">
+                </div>
+                <div>
+                    <label>Do you feel physically affected?</label>
+                    <div>
+                        <div class="radio">
+                            <label>
+                            <input id="physicallyAffected_yes" type="radio" name="physicallyAffected" value="true">
+                            <span>Yes</span>
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                            <input id="physicallyAffected_no" type="radio" name="physicallyAffected" value="false" checked>
+                            <span>No</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label>Your most used type of nicotine products:</label>
+                    <div>
+                        <div class="radio">
+                            <label>
+                            <input id="kindOfNicotine_smoking" type="radio" name="kindOfNicotine" value="Smoking tobacco" checked>
+                            <span>Smoking tobacco (Cigarettes etc.)</span>
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                            <input id="kindOfNicotine_otherTobacco" type="radio" name="kindOfNicotine" value="Other tobacco">
+                            <span>Other tobacco (Snus etc.)</span>
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                            <input id="kindOfNicotine_electronic" type="radio" name="kindOfNicotine" value="Electronic">
+                            <span>Electronic (Electronic cigarettes etc.)</span>
+                            </label>
+                        </div>
+                    </div>                
+                </div>
+                <div class="textbox">
+                    <label for="commentary">Leave a comment to advise others not to use nicotine:</label>
+                    <label id="commentary_charcounter" class="charcounter">0/500</label>
+                    <textarea name="commentary" id="commentary" rows="4" cols="50" placeholder="(Optional, up to 500 characters)"></textarea>       
+                </div>
+            </div>
+            <button onclick="submit()" style="width: auto; height: 100px;">-></button>
+            <div id="check_resp" class="check"></div>
+        </div>
+        
+        <script src="new.js" defer></script>
+        <script src="new-submit.js"></script>
+    </body>
+</html>

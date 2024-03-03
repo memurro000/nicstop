@@ -1,6 +1,22 @@
+function displaySignerInSingle(signer, single_note){
+    for(var x in signer) {
+        if(x !== 'ip'){
+            if(signer[x] === true ) signer[x] = 'Yes';
+            if(signer[x] === false) signer[x] = 'No';
+            console.log(x);
+            var format = x.replace(/([A-Z])/g, " $1");
+            format = format.charAt(0).toUpperCase() + format.slice(1);
+            single_note.innerHTML += 
+                `<div><b>${format}: </b><label>${signer[x] || ''}</label></div>`;
+        }
+        
+    }
+    
+}
+
 const http = new XMLHttpRequest();
 const url = '/api/v1/signers/get/random';
-http.open("GET", url);
+http.open("GET", url, true);
 http.send();
 
 http.onreadystatechange = (e) => {
@@ -15,20 +31,11 @@ http.onreadystatechange = (e) => {
         console.log("Answer status: " + http.status);
 
         const data = JSON.parse(http.responseText);
-        
-        const note = 
-                document.getElementById("resp_div");
-    
+       
+        const note = document.getElementById("resp_div");
 
-        note.innerHTML += `<b>ID: </b>${data.id                           || ''    } `;
-        note.innerHTML += `<b>Age: </b>${data.age                         || ''    } `;
-        note.innerHTML += `<b>Experience: </b>${data.experience           || ''    } `;
-        note.innerHTML += `<b>Kind of Nicotine: </b>${data.kindOfNicotine || ''    } `;
-        note.innerHTML += 
-                `<b>Physically Affected: </b>${data.physicallyAffected ? 'Yes' : 'No'} `;
-        note.innerHTML += 
-                `<p></p><b>Commentary: </b>
-                 <p></p>${data.commentary} `;
+        displaySignerInSingle(data, note);
+        
     }
 };
 
