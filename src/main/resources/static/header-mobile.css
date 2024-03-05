@@ -1,5 +1,9 @@
 .header-div {
     background-color: black;
+    display: flex;
+    place-content: space-between;
+    margin: 0;
+    flex-direction: column;
 }
 
 .header-home {
@@ -45,6 +49,7 @@
   line-height: 3;
   color: black;
   font-size: var(--HEADER_FONT_SIZE);
+  margin: 0;
 }
 
 .header-a:link,
@@ -69,4 +74,42 @@
     -webkit-background-clip: none;
     -webkit-text-fill-color: white; 
     color: white;
+}
+
+/* Стили для навигационного меню */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    place-content: space-between;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+/* Стили для выпадающего меню */
+.dropdown {
+    position: relative;
+    width: calc(5 * var(--FONT_SIZE));
+    height: calc(4 * var(--FONT_SIZE));
+    background-color: var(--COLOR_ACC1);
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    right: 0;
+    top: calc(3 * var(--HEADER_FONT_SIZE));
+    backdrop-filter: blur(5px);
+    background: #1e0d0787;
 }
