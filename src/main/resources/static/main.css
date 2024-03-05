@@ -1,18 +1,55 @@
+:root {
+    --FONT_SIZE: 20px;
+    --HEADER_MULTIPLIER: 1.5;
+    --COLOR_ACC1: #ffa100;
+    --COLOR_ACC2: #ff662f;
+    --COLOR_BG: #fdf8f1;
+    
+    --BACKDROP-COLOR_BG: antiquewhite;
+    --BACKDROP-COLOR_FONT: #955d12;
+    --BACKDROP-COLOR_FONT_EM: #482d08;
+    --BACKDROP-COLOR_INPUT_BG: #fdf8f1;
+    --BACKDROP-COLOR_INPUT_FONT: #955d12;
+    
+    --HEADER_FONT_SIZE: calc(var(--FONT_SIZE) * var(--HEADER_MULTIPLIER));
+}
+
 body,
 html {
+  background-color: var(--COLOR_BG);
   padding-top: 50px;
   padding-bottom: 50px;
   margin: 0;
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 20px;
+  font-size: var(--FONT_SIZE);
 }
 
 .backdrop {
-    background-color: antiquewhite;
-    border-radius: 20px;
-    padding: 20px;
+    background-color: var(--BACKDROP-COLOR_BG);
+    border-radius: var(--FONT_SIZE);
+    padding: var(--FONT_SIZE);
+}
+
+.backdrop label,
+.backdrop span {
+    color: var(--BACKDROP-COLOR_FONT);
+    width: initial;
+}
+
+.backdrop em {
+    color: var(--BACKDROP-COLOR_FONT_EM);
+} 
+
+.backdrop input,
+.backdrop textarea {
+    background-color: var(--BACKDROP-COLOR_INPUT_BG);
+    color: var(--BACKDROP-COLOR_INPUT_FONT);
+}
+
+.backdrop label span:before {
+    background-color: var(--BACKDROP-COLOR_INPUT_BG);
 }
 
 #header {
@@ -40,7 +77,7 @@ html {
     font-size: 60px;
     color: #fff;
     padding: 10px 32px;
-    background: linear-gradient(168deg, #ffa100 27%, #ff4c44 100%);
+    background: linear-gradient(168deg, var(--COLOR_ACC1) 27%, var(--COLOR_ACC2) 82%);
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     border-radius: 70px;
     transition: 74ms;
@@ -65,7 +102,7 @@ html {
 
 table {
 	width: 100%;
-	margin-bottom: 20px;
+	margin-bottom: var(--FONT_SIZE);
 	border: 1px dashed white;
 	border-collapse: collapse; 
         margin-left: auto;

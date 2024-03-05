@@ -3,10 +3,10 @@
 <html>
     <head>
         <link rel="stylesheet" href="../main.css" type="text/css"/>
-        <link rel="stylesheet" href="new.css" type="text/css">
+        <link rel="stylesheet" href="update.css" type="text/css">
 
 
-        <title>new</title>
+        <title>edit</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -18,6 +18,15 @@
 
         <div class="main">
             <div class="form backdrop">
+                <div>
+                    <label for="id">ID:</label>
+                    <input name="id" id="id" type="number" placeholder="Entry ID">
+                </div>
+                <div>
+                    <label for="key">Key:</label>
+                    <input name="key" id="key" type="number" placeholder="Entry Key">
+                </div>
+                <hr>
                 <div>
                     <label for="age">Age:</label>
                     <input name="age" id="age" type="number" min="0" max="99" placeholder="Years">
@@ -76,7 +85,7 @@
             <div id="check_resp" class="check"></div>
         </div>
         
-        <script src="new.js" defer></script>
-        <script src="new-submit.js"></script>
+        <script src="update.js" defer></script>
+        <script src="update-submit.js"></script>
     </body>
 </html>

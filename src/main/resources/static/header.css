@@ -4,17 +4,17 @@
 
 .header-home {
   margin-left: 50px;
-  margin: 20px;
+  margin: var(--HEADER_FONT_SIZE);
   flex: 1;
   text-decoration: none;
   outline-color: transparent;
   text-align: center;
   line-height: 3;
   font-size: 72px;
-  background: -webkit-linear-gradient(168deg, #ffa100 27%, #ff4c44 100%);
+  background: -webkit-linear-gradient(168deg, var(--COLOR_ACC1) 27%, var(--COLOR_ACC2) 82%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
-  font-size: 30px;
+  font-size: var(--HEADER_FONT_SIZE);
 }
 
 .header-home:link,
@@ -37,14 +37,14 @@
 }
 
 .header-a {
-  margin: 20px;
+  margin: var(--FONT_SIZE);
   flex: 1;
   text-decoration: none;
   outline-color: transparent;
   text-align: center;
   line-height: 3;
   color: black;
-  font-size: 30px;
+  font-size: var(--HEADER_FONT_SIZE);
 }
 
 .header-a:link,

@@ -7,7 +7,7 @@ function displaySignerInSingle(signer, single_note){
             var format = x.replace(/([A-Z])/g, " $1");
             format = format.charAt(0).toUpperCase() + format.slice(1);
             single_note.innerHTML += 
-                `<div><b>${format}: </b><label>${signer[x] || ''}</label></div>`;
+                `<div><label><b>${format}: </b></label><span>${signer[x] || ''}</span></div>`;
         }
         
     }

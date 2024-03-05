@@ -1,0 +1,26 @@
+.single {
+    margin-top: 1;
+    background-color: antiquewhite;
+    align-self: center;
+    font-size: var(--FONT_SIZE);
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: 50%;
+}
+
+.single div {
+    display: flex;
+    margin-top: 10px;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.single label {
+    width: 277px;
+    margin: 0;
+}
+
+.single b {
+    margin-right: var(--FONT_SIZE);
+}
