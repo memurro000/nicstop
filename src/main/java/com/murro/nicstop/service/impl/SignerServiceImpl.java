@@ -17,39 +17,44 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class SignerServiceImpl implements SignerService{
 
-    private final SignerRepo signer_repo;
-    private final SignTokenRepo token_repo;
+    private final SignerRepo signerRepo;
+    private final SignTokenRepo tokenRepo;
 
     private final SecureRandom srandom = new SecureRandom();
 
     @Override
     public List<UserSigner> findAllSigners() {
-        System.out.println(token_repo.findAll());
-        return signer_repo.findAll();
+        System.out.println(tokenRepo.findAll());
+        return signerRepo.findAll();
     }
 
     @Override
     public UserSigner findById(long id) {
-        System.out.println(token_repo.getReferenceById(id));
-        return signer_repo.getReferenceById(id);
+        System.out.println(tokenRepo.getReferenceById(id));
+        return signerRepo.getReferenceById(id);
     }
 
     @Override
     public UserSigner getRandom() {
-        return signer_repo.findRandomUserSignerWithCommentary();
+        return signerRepo.findRandomUserSignerWithCommentary();
     }
 
     @Override
     public UserSignToken saveSigner(UserSigner signer) {
-        signer_repo.save(signer);
-        return token_repo.save(new UserSignToken(srandom.nextInt()));
+        signerRepo.save(signer);
+        return tokenRepo.save(new UserSignToken(srandom.nextInt()));
     }
 
     @Override
     public String updateSigner(UserSigner signer, int key) {
-        if(token_repo.getReferenceById(signer.getId())
+        Long id = signer.getId(); 
+
+        if(!signerRepo.existsById(id)) 
+            return "No such signer";
+        
+        if(tokenRepo.getReferenceById(id)
                 .getKey().equals(key))
-            return "Success! " + signer_repo.save(signer).toString();
+            return "Success! " + signerRepo.save(signer).toString();
         else
             return "Wrong key!";
     }
@@ -57,13 +62,13 @@ public class SignerServiceImpl implements SignerService{
     @Override
     public String deleteSigner(UserSignToken token) {
         Long id = token.getId();
-        if(!signer_repo.existsById(id)) 
+        if(!signerRepo.existsById(id)) 
             return "No such signer";
         
-        if(token_repo.getReferenceById(id)
+        if(tokenRepo.getReferenceById(id)
                 .equals(token)) {
-            signer_repo.deleteById(id);
-            token_repo.deleteById(id);
+            signerRepo.deleteById(id);
+            tokenRepo.deleteById(id);
             return "Success!";
         } 
         else {
